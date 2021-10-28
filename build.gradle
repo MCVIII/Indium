@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '0.8-SNAPSHOT'
+    id 'fabric-loom' version '0.10-SNAPSHOT'
     id 'maven-publish'
 
 	id 'org.ajoberstar.grgit' version '4.1.0'
@@ -25,6 +25,7 @@ repositories {
 	maven {
 		url = "https://api.modrinth.com/maven"
 	}
+	mavenLocal()
 }
 
 dependencies {
@@ -42,7 +43,7 @@ dependencies {
     // PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
     // You may need to force-disable transitiveness on them.
 
-	modImplementation "maven.modrinth:sodium:mc1.17.1-0.3.0"
+	modImplementation "me.jellysquid.mods:sodium-fabric:0.3.2+IRIS2+"
 }
 
 processResources {
